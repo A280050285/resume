@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LXS - 个人简历 / 作品集</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ========== 导航栏 ========== -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="nav-logo">LXS</a>
+      <ul class="nav-links">
+        <li><a href="#about">关于我</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#experience">经历</a></li>
+        <li><a href="#works">作品</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="菜单">☰</button>
+    </div>
+  </nav>
+
+  <!-- ========== 头部 / Hero ========== -->
+  <header id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <p class="hero-greeting">👋 你好，我是</p>
+        <h1 class="hero-name">李鑫盛</h1>
+        <p class="hero-title">医疗机器人结构工程师</p>
+        <p class="hero-desc">
+          2 年工作经验，专注于腹腔镜手术机器人台车结构设计。
+          擅长元器件选型、传动系统设计、工装设计及模拟仿真分析。
+        </p>
+        <div class="hero-actions">
+          <a href="#works" class="btn btn-primary">查看作品</a>
+          <a href="#contact" class="btn btn-outline">联系我</a>
+        </div>
+      </div>
+      <div class="hero-avatar">
+        <!-- 替换为你的头像: images/avatar.jpg -->
+        <div class="avatar-placeholder">LXS</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== 关于我 ========== -->
+  <section id="about" class="section">
+    <div class="container">
+      <h2 class="section-title">关于我</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            我是一名医疗机器人结构工程师，目前就职于<strong>北京术锐机器人股份有限公司</strong>，
+            专注于腹腔镜手术机器人台车的结构设计与研发工作。
+          </p>
+          <p>
+            工作中主导过多款手术台车关键模块的结构方案设计，涵盖元器件选型、精密传动系统设计、
+            工装夹具开发及有限元模拟仿真分析，具备扎实的机械设计功底与跨部门协作能力。
+          </p>
+          <ul class="about-info">
+            <li><span class="info-label">📍 所在地</span> 中国 · 北京</li>
+            <li><span class="info-label">📧 邮箱</span> 2830845469@qq.com</li>
+            <li><span class="info-label">🎂 出生年份</span> 2002 年</li>
+            <li><span class="info-label">🎓 学历</span> 本科 · 机械设计制造及其自动化</li>
+          </ul>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">年工作经验</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">10+</span>
+            <span class="stat-label">台车模块设计</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">专利申请</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">3+</span>
+            <span class="stat-label">仿真分析项目</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 技能 ========== -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">专业技能</h2>
+      <div class="skills-grid">
+        <!-- 技能分类 1 -->
+        <div class="skill-category">
+          <h3>📐 CAD 设计软件</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">SolidWorks</span>
+            <span class="skill-tag">Creo / ProE</span>
+            <span class="skill-tag">AutoCAD</span>
+            <span class="skill-tag">CATIA</span>
+            <span class="skill-tag">UG/NX</span>
+            <span class="skill-tag">Inventor</span>
+          </div>
+        </div>
+        <!-- 技能分类 2 -->
+        <div class="skill-category">
+          <h3>🔬 仿真与分析</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">ANSYS Workbench</span>
+            <span class="skill-tag">ABAQUS</span>
+            <span class="skill-tag">ADAMS 动力学</span>
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">有限元分析</span>
+            <span class="skill-tag">运动学仿真</span>
+          </div>
+        </div>
+        <!-- 技能分类 3 -->
+        <div class="skill-category">
+          <h3>⚙️ 结构设计 & 工程</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">元器件选型</span>
+            <span class="skill-tag">精密传动设计</span>
+            <span class="skill-tag">工装夹具设计</span>
+            <span class="skill-tag">GD&T 公差分析</span>
+            <span class="skill-tag">DFM/DFA</span>
+            <span class="skill-tag">BOM 管理</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 工作经历 ========== -->
+  <section id="experience" class="section">
+    <div class="container">
+      <h2 class="section-title">工作经历</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>结构工程师</h3>
+              <span class="timeline-company">北京术锐机器人股份有限公司</span>
+              <span class="timeline-date">2024.03 - 至今</span>
+            </div>
+            <ul class="timeline-desc">
+              <li>负责腹腔镜手术机器人台车核心模块的结构设计与优化，完成从方案设计到工程图纸的全流程开发</li>
+              <li>主导关键传动系统（丝杠导轨、同步带轮系）的选型计算与结构布局，确保定位精度达到亚毫米级</li>
+              <li>独立完成多套手术器械工装夹具的设计与验证，大幅提升装配效率与一致性</li>
+              <li>使用 ANSYS 进行关键零部件的静力学与模态分析，优化结构刚度与轻量化设计</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>助理结构工程师</h3>
+              <span class="timeline-company">北京术锐机器人股份有限公司</span>
+              <span class="timeline-date">2023.07 - 2024.02</span>
+            </div>
+            <ul class="timeline-desc">
+              <li>参与手术台车从端机械臂的元器件选型与供应商技术对接，涉及电机、减速器、传感器等核心部件</li>
+              <li>协助完成手术台车无菌罩适配结构的设计与工程图绘制，确保符合医疗灭菌规范</li>
+              <li>负责 BOM 清单编制与维护，配合生产部门完成样机试制与装配调试</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>机械设计实习生</h3>
+              <span class="timeline-company">某医疗器械公司</span>
+              <span class="timeline-date">2022.09 - 2023.06</span>
+            </div>
+            <ul class="timeline-desc">
+              <li>参与微创手术器械的结构设计与改进，完成 3D 建模及 2D 工程图输出</li>
+              <li>学习并实践医疗设备开发流程，熟悉 ISO 13485 质量管理体系要求</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 教育背景 ========== -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">教育背景</h2>
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>某大学 · 机械设计制造及其自动化</h3>
+              <span class="timeline-date">2019.09 - 2023.06</span>
+            </div>
+            <p class="timeline-desc">本科 · 主修课程：机械原理、机械设计、材料力学、控制工程基础、CAD/CAM 技术</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 作品展示 ========== -->
+  <section id="works" class="section">
+    <div class="container">
+      <h2 class="section-title">作品展示</h2>
+      <p class="section-subtitle">以下是我参与或独立完成的部分项目</p>
+
+      <div class="works-grid">
+
+        <!-- 作品卡片 1 -->
+        <div class="work-card">
+          <div class="work-image">
+            <div class="work-img-placeholder">🤖</div>
+          </div>
+          <div class="work-info">
+            <h3>腹腔镜手术台车从端机械臂</h3>
+            <p>负责台车从端多自由度机械臂的结构方案设计，完成关节传动链布局与电机-减速器选型匹配</p>
+            <div class="work-tags">
+              <span>SolidWorks</span><span>传动设计</span><span>电机选型</span><span>ANSYS</span>
+            </div>
+            <a href="#" class="work-link">查看详情 →</a>
+          </div>
+        </div>
+
+        <!-- 作品卡片 2 -->
+        <div class="work-card">
+          <div class="work-image">
+            <div class="work-img-placeholder">🔧</div>
+          </div>
+          <div class="work-info">
+            <h3>手术器械快换工装</h3>
+            <p>设计手术器械的快速更换工装夹具，实现术中器械的精准定位与可靠锁紧，已投入量产使用</p>
+            <div class="work-tags">
+              <span>工装设计</span><span>Creo</span><span>公差分析</span><span>DFM</span>
+            </div>
+            <a href="#" class="work-link">查看详情 →</a>
+          </div>
+        </div>
+
+        <!-- 作品卡片 3 -->
+        <div class="work-card">
+          <div class="work-image">
+            <div class="work-img-placeholder">📊</div>
+          </div>
+          <div class="work-info">
+            <h3>台车关键部件有限元分析</h3>
+            <p>对台车升降立柱及底座进行 ANSYS 静力学与模态分析，优化结构减重 15% 同时满足刚度要求</p>
+            <div class="work-tags">
+              <span>ANSYS</span><span>有限元分析</span><span>模态分析</span><span>结构优化</span>
+            </div>
+            <a href="#" class="work-link">查看详情 →</a>
+          </div>
+        </div>
+
+        <!-- 作品卡片 4 -->
+        <div class="work-card">
+          <div class="work-image">
+            <div class="work-img-placeholder">⚙️</div>
+          </div>
+          <div class="work-info">
+            <h3>精密丝杠传动模组</h3>
+            <p>完成手术台车 Z 轴升降模组的丝杠导轨选型、传动计算与结构集成设计，定位精度 ±0.02mm</p>
+            <div class="work-tags">
+              <span>丝杠选型</span><span>传动计算</span><span>SolidWorks</span><span>精度分析</span>
+            </div>
+            <a href="#" class="work-link">查看详情 →</a>
+          </div>
+        </div>
+
+        <!-- 作品卡片 5 -->
+        <div class="work-card">
+          <div class="work-image">
+            <div class="work-img-placeholder">📐</div>
+          </div>
+          <div class="work-info">
+            <h3>无菌适配屏障结构设计</h3>
+            <p>完成手术机器人无菌罩与适配器的结构设计，满足 IPX4 防水与高温高压灭菌的临床使用要求</p>
+            <div class="work-tags">
+              <span>结构设计</span><span>医疗灭菌</span><span>密封设计</span><span>Creo</span>
+            </div>
+            <a href="#" class="work-link">查看详情 →</a>
+          </div>
+        </div>
+
+        <!-- 作品卡片 6 -->
+        <div class="work-card">
+          <div class="work-image">
+            <div class="work-img-placeholder">🔬</div>
+          </div>
+          <div class="work-info">
+            <h3>ADAMS 运动学仿真分析</h3>
+            <p>建立台车机械臂多体动力学模型，仿真验证关节运动范围与干涉检查，指导结构方案迭代</p>
+            <div class="work-tags">
+              <span>ADAMS</span><span>运动学仿真</span><span>MATLAB</span><span>多体动力学</span>
+            </div>
+            <a href="#" class="work-link">查看详情 →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 联系方式 ========== -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">联系我</h2>
+      <p class="section-subtitle">如果你对我的经历感兴趣，欢迎随时联系</p>
+      <div class="contact-grid">
+        <a href="mailto:2830845469@qq.com" class="contact-card">
+          <span class="contact-icon">📧</span>
+          <span class="contact-label">邮箱</span>
+          <span class="contact-value">2830845469@qq.com</span>
+        </a>
+        <a href="https://github.com/A280050285" target="_blank" class="contact-card">
+          <span class="contact-icon">💻</span>
+          <span class="contact-label">GitHub</span>
+          <span class="contact-value">github.com/A280050285</span>
+        </a>
+        <a href="#" class="contact-card">
+          <span class="contact-icon">🔗</span>
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">linkedin.com/in/LXS</span>
+        </a>
+        <a href="#" class="contact-card">
+          <span class="contact-icon">📝</span>
+          <span class="contact-label">技术博客</span>
+          <span class="contact-value">LXS.tech</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 页脚 ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 LXS. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
