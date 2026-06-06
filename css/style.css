@@ -4,21 +4,23 @@
 
 /* ---------- CSS 变量 ---------- */
 :root {
-  --color-bg: #ffffff;
-  --color-bg-alt: #f5f8fa;
-  --color-text: #1a2332;
-  --color-text-light: #5a6d7e;
-  --color-primary: #0d7c7c;
-  --color-primary-light: #5bbfb5;
-  --color-primary-dark: #065858;
-  --color-accent: #1e90d4;
-  --color-border: #dde4ea;
-  --color-card-bg: #ffffff;
-  --color-tag-bg: #e6f4f2;
-  --color-tag-text: #0d7c7c;
-  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
-  --shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
+  --color-bg: #0d0d14;
+  --color-bg-alt: #14141f;
+  --color-text: #e0e0ec;
+  --color-text-light: #8a8aa8;
+  --color-primary: #00e5ff;
+  --color-primary-light: #5ef7ff;
+  --color-primary-dark: #009faf;
+  --color-accent: #d500f9;
+  --color-accent2: #ff2d95;
+  --color-border: #252540;
+  --color-card-bg: #16162a;
+  --color-tag-bg: #1a1040;
+  --color-tag-text: #b388ff;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 20px rgba(0,229,255,0.08);
+  --shadow-lg: 0 10px 40px rgba(0,229,255,0.12);
+  --glow: 0 0 20px rgba(0,229,255,0.3);
   --radius: 12px;
   --radius-sm: 8px;
   --max-width: 1120px;
@@ -70,7 +72,7 @@ img {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(255,255,255,0.85);
+  background: rgba(13,13,20,0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
@@ -95,10 +97,11 @@ img {
   width: 42px;
   height: 42px;
   border-radius: var(--radius-sm);
-  background: var(--color-tag-bg);
+  background: rgba(0,229,255,0.08);
   display: flex;
   align-items: center;
   justify-content: center;
+  text-shadow: 0 0 10px rgba(0,229,255,0.5);
 }
 
 .nav-links {
@@ -134,7 +137,24 @@ img {
   display: flex;
   align-items: center;
   padding-top: 64px;
-  background: linear-gradient(135deg, #e6f4f2 0%, #f0f8fa 50%, #e8f4fd 100%);
+  background: linear-gradient(170deg, #08081a 0%, #0d1025 40%, #1a1040 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero 背景图 */
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.40;
+  z-index: 0;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
 }
 
 .hero-inner {
@@ -199,14 +219,14 @@ img {
   width: 280px;
   height: 280px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--color-primary-light), var(--color-accent));
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 80px;
   font-weight: 700;
   color: #ffffff;
-  box-shadow: 0 20px 60px rgba(13,124,124,0.25);
+  box-shadow: 0 20px 60px rgba(0,229,255,0.3), 0 0 80px rgba(213,0,249,0.15);
   user-select: none;
 }
 
@@ -235,9 +255,9 @@ img {
 }
 
 .btn-primary:hover {
-  background: var(--color-primary-dark);
+  background: var(--color-accent);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(13,124,124,0.35);
+  box-shadow: 0 8px 24px rgba(213,0,249,0.4);
 }
 
 .btn-outline {
@@ -266,6 +286,7 @@ img {
   text-align: center;
   margin-bottom: 12px;
   position: relative;
+  color: #f0f0ff;
 }
 
 .section-title::after {
@@ -500,7 +521,7 @@ img {
   width: 100%;
   height: 200px;
   overflow: hidden;
-  background: linear-gradient(135deg, #e6f4f2, #f0f8fa);
+  background: linear-gradient(135deg, #12122a, #1a1040);
 }
 
 .work-image img {
@@ -516,6 +537,7 @@ img {
   align-items: center;
   justify-content: center;
   font-size: 56px;
+  filter: drop-shadow(0 0 12px rgba(0,229,255,0.3));
 }
 
 .work-info {
@@ -579,10 +601,11 @@ img {
 .blog-category {
   font-size: 11px;
   padding: 2px 8px;
-  background: var(--color-primary);
+  background: var(--color-accent);
   color: #fff;
   border-radius: 10px;
   font-weight: 500;
+  box-shadow: 0 0 10px rgba(213,0,249,0.4);
 }
 
 .work-card-empty {
@@ -660,7 +683,8 @@ img {
 }
 
 .blog-post-body pre {
-  background: var(--color-bg-alt);
+  background: #0a0a18;
+  border: 1px solid var(--color-border);
   padding: 20px;
   border-radius: var(--radius-sm);
   overflow-x: auto;
@@ -669,7 +693,8 @@ img {
 }
 
 .blog-post-body code {
-  background: var(--color-bg-alt);
+  background: rgba(0,229,255,0.08);
+  color: var(--color-primary);
   padding: 2px 6px;
   border-radius: 4px;
   font-size: 14px;
@@ -755,6 +780,7 @@ img {
   border-top: 1px solid var(--color-border);
   font-size: 14px;
   color: var(--color-text-light);
+  background: var(--color-bg);
 }
 
 /* ============================================
