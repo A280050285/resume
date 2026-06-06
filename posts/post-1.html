@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>腹腔镜手术机器人系统架构与结构设计概述 - 李鑫盛的博客</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">LXS</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#blog">← 返回博客</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="blog-post">
+    <header class="blog-post-header">
+      <h1>腹腔镜手术机器人系统架构与结构设计概述</h1>
+      <div class="blog-post-meta">
+        <span>📅 2026-06-06</span>
+        <span>🏷️ 结构设计</span>
+        <span>👤 李鑫盛</span>
+      </div>
+    </header>
+
+    <div class="blog-post-body">
+      <p>腹腔镜手术机器人是微创外科领域最具代表性的高端医疗装备，它通过多自由度机械臂与高清三维成像系统，让外科医生能够以超越人手极限的精度完成复杂手术。本文将从一个结构工程师的视角，梳理腹腔镜手术机器人的系统架构与核心结构设计要点。</p>
+
+      <h2>1. 系统总体架构</h2>
+      <p>一套典型的腹腔镜手术机器人系统由三大子系统组成：</p>
+      <ul>
+        <li><strong>医生控制台（Surgeon Console）：</strong>外科医生坐在控制台前，通过主手操作器和脚踏板控制远端器械，同时观看三维高清内窥镜画面</li>
+        <li><strong>患者手术台车（Patient-side Cart）：</strong>承载多根从端机械臂，直接与患者接触，执行手术操作</li>
+        <li><strong>影像处理系统（Vision Cart）：</strong>负责内窥镜图像的采集、处理与显示，通常包含光源、气腹机等辅助设备</li>
+      </ul>
+      <p>其中，患者手术台车是结构设计的核心和难点所在，也是本文重点讨论的对象。</p>
+
+      <h2>2. 患者手术台车的结构组成</h2>
+      <p>台车的结构设计直接影响手术精度、覆盖范围与操作便捷性。其主要结构模块包括：</p>
+
+      <h3>2.1 底座与移动底盘</h3>
+      <p>底座需提供足够的稳定性——在机械臂全伸展状态下，台车不能出现倾覆。通常采用铸铁或厚钢板焊接结构，配合大直径脚轮（含锁定机构）。底座内部布置电源模块与控制柜，整体重心尽量压低。</p>
+
+      <h3>2.2 升降立柱</h3>
+      <p>升降立柱是台车的"脊柱"，负责将机械臂组件提升至手术所需高度。常见方案有电动推杆式和丝杠导轨式。手术机器人对升降精度要求极高——一般要求在 ±0.5mm 以内，且需要可靠的机械自锁功能防止意外坠落。</p>
+
+      <h3>2.3 从端机械臂</h3>
+      <p>每根机械臂通常有 6~7 个自由度，末端连接手术器械。结构设计要点包括：</p>
+      <ul>
+        <li>关节采用谐波减速器实现零回差传动</li>
+        <li>臂杆采用铝合金或碳纤维材质以减轻重量</li>
+        <li>内部走线（电机线、传感器线）需走中空结构或隐藏式线槽</li>
+        <li>远程运动中心（RCM）机构确保器械绕穿刺点运动</li>
+      </ul>
+
+      <h2>3. 关键设计要素</h2>
+
+      <h3>3.1 刚性设计</h3>
+      <p>手术机器人末端受力可能在 5~10N 范围内，通过长臂杆的放大效应，基座处的变形要求极为严苛。通常采用有限元分析（ANSYS/ABAQUS）对关键结构件进行静刚度与动刚度分析，确保末端变形控制在微米级。</p>
+
+      <h3>3.2 无菌屏障设计</h3>
+      <p>这是医疗设备特有的设计要求。机械臂需要套上一次性无菌罩进行隔离，无菌罩与机械臂之间通过适配器连接。适配器的结构需同时满足：</p>
+      <ul>
+        <li>可靠的机械锁紧与快速释放</li>
+        <li>无菌区域的完整密封</li>
+        <li>不影响机械臂的运动范围</li>
+      </ul>
+
+      <h3>3.3 人机工程</h3>
+      <p>台车在手术室中需要频繁移动和调整姿态。优秀的人机工程设计包括：合理的把手高度与位置、直观的状态指示灯、轻便的推动力度（通常目标小于 50N 推力）。</p>
+
+      <h2>4. 设计流程</h2>
+      <p>一个典型的结构设计流程如下：</p>
+      <ol>
+        <li><strong>需求分析：</strong>明确临床需求（手术类型、工作空间、载荷要求）</li>
+        <li><strong>概念设计：</strong>手绘草图 + 方案对比评审</li>
+        <li><strong>详细设计：</strong>SolidWorks/Creo 三维建模 + 二维工程图</li>
+        <li><strong>仿真验证：</strong>静力学/模态/运动学仿真</li>
+        <li><strong>样机试制：</strong>CNC 加工 + 3D 打印验证件</li>
+        <li><strong>测试验证：</strong>精度测试、刚度测试、可靠性测试</li>
+        <li><strong>设计冻结：</strong>归档图纸与 BOM，转入生产</li>
+      </ol>
+
+      <h2>5. 行业趋势</h2>
+      <p>腹腔镜手术机器人正朝着以下方向发展：</p>
+      <ul>
+        <li><strong>小型化：</strong>减小台车体积，适应更小的手术室空间</li>
+        <li><strong>模块化：</strong>机械臂可快速拆卸更换，适应不同手术类型</li>
+        <li><strong>智能化：</strong>集成力反馈传感器与 AI 辅助功能</li>
+        <li><strong>国产化：</strong>核心零部件（电机、减速器、传感器）逐步实现国产替代</li>
+      </ul>
+
+      <p>作为国内手术机器人行业的一员，我深切感受到这个领域正在快速发展。后续我会针对具体的设计细节（如丝杠选型、同步带设计、ANSYS 分析案例等）逐一分享，欢迎持续关注！</p>
+    </div>
+
+    <a href="../index.html#blog" class="blog-post-back">← 返回博客首页</a>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 李鑫盛. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
