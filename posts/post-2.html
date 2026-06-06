@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ANSYS Workbench 在医疗设备结构优化中的应用 - 李鑫盛的博客</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="../index.html" class="nav-logo">LXS</a>
+      <ul class="nav-links">
+        <li><a href="../index.html#blog">← 返回博客</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="blog-post">
+    <header class="blog-post-header">
+      <h1>ANSYS Workbench 在医疗设备结构优化中的应用</h1>
+      <div class="blog-post-meta">
+        <span>📅 2026-05-20</span>
+        <span>🏷️ 仿真分析</span>
+        <span>👤 李鑫盛</span>
+      </div>
+    </header>
+
+    <div class="blog-post-body">
+      <p>在医疗设备研发中，结构仿真分析是保证产品性能与安全性的关键环节。ANSYS Workbench 作为业界主流的有线元分析平台，提供了从几何建模到结果后处理的完整工作流。本文通过一个台车升降立柱的实际案例，介绍仿真分析的方法与经验。</p>
+
+      <h2>1. 为什么需要仿真分析</h2>
+      <p>医疗机器人结构设计面临诸多挑战：</p>
+      <ul>
+        <li>严格的刚度要求——手术过程中机械臂末端的变形必须控制在微米级</li>
+        <li>轻量化需求——台车需要频繁移动，过重会影响操作体验</li>
+        <li>安全系数——医疗设备通常要求更高的安全系数（3~5 倍）</li>
+      </ul>
+      <p>通过仿真分析，可以在打样之前预判结构性能，大幅降低试错成本。</p>
+
+      <h2>2. 静力学分析流程</h2>
+      <h3>2.1 模型简化</h3>
+      <p>导入 SolidWorks 三维模型后，首先进行几何清理：去除小孔、倒角、螺纹等不影响整体刚度的特征，将装配体适当简化，以提高网格质量与计算效率。</p>
+      <h3>2.2 材料定义</h3>
+      <p>常用材料参数：铝合金 6061-T6（E=68.9 GPa, ν=0.33, ρ=2700 kg/m³）、不锈钢 304（E=193 GPa, ν=0.29, ρ=8000 kg/m³）。</p>
+      <h3>2.3 网格划分</h3>
+      <p>采用四面体与六面体混合网格，关键区域进行局部细化。网格数量控制在 10~50 万单元之间，在精度与计算时间之间取得平衡。</p>
+
+      <h2>3. 模态分析</h2>
+      <p>除了静力学分析，模态分析同样重要——台车在移动和手术过程中可能受到外部激励，需要避免共振。一般要求一阶固有频率高于 50Hz，远离伺服电机的工作频率。</p>
+
+      <h2>4. 优化迭代</h2>
+      <p>在一次升降立柱的优化中，通过 ANSYS 拓扑优化模块，我们在保证刚度不降低的前提下，将立柱壁厚从 8mm 优化到 5.5mm，减重约 15%。具体步骤：</p>
+      <ul>
+        <li>定义设计区域与非设计区域</li>
+        <li>设置约束条件（最大变形 ≤ 0.05mm）</li>
+        <li>设置目标函数（最小化质量）</li>
+        <li>迭代求解并解读结果</li>
+      </ul>
+
+      <h2>5. 经验总结</h2>
+      <p>仿真分析的准确性取决于边界条件设置的合理性。建议在关键项目中结合实验测试（如应变片测量）验证仿真模型，形成"仿真-测试-修正"的闭环。同时，善用 ANSYS 的参数化功能，可以快速进行多方案对比分析。</p>
+    </div>
+
+    <a href="../index.html#blog" class="blog-post-back">← 返回博客首页</a>
+  </article>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 李鑫盛. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>

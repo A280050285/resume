@@ -562,6 +562,139 @@ img {
   color: var(--color-primary-dark);
 }
 
+/* ---------- 博客文章卡片 ---------- */
+.blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.blog-date {
+  font-size: 12px;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.blog-category {
+  font-size: 11px;
+  padding: 2px 8px;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.work-card-empty {
+  opacity: 0.6;
+}
+
+.work-card-empty:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.work-link-disabled {
+  color: var(--color-text-light);
+  cursor: default;
+}
+
+/* ---------- 博客文章详情页 ---------- */
+.blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.blog-post-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-top: 80px;
+}
+
+.blog-post-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.blog-post-meta {
+  color: var(--color-text-light);
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.blog-post-body {
+  font-size: 16px;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
+.blog-post-body h2 {
+  font-size: 24px;
+  margin: 36px 0 16px;
+  color: var(--color-primary);
+}
+
+.blog-post-body h3 {
+  font-size: 20px;
+  margin: 28px 0 12px;
+}
+
+.blog-post-body p {
+  margin-bottom: 16px;
+}
+
+.blog-post-body ul, .blog-post-body ol {
+  margin-bottom: 16px;
+  padding-left: 24px;
+}
+
+.blog-post-body li {
+  margin-bottom: 8px;
+  list-style: disc;
+}
+
+.blog-post-body pre {
+  background: var(--color-bg-alt);
+  padding: 20px;
+  border-radius: var(--radius-sm);
+  overflow-x: auto;
+  margin-bottom: 16px;
+  font-size: 14px;
+}
+
+.blog-post-body code {
+  background: var(--color-bg-alt);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.blog-post-body img {
+  max-width: 100%;
+  border-radius: var(--radius-sm);
+  margin: 20px 0;
+}
+
+.blog-post-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 40px;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.blog-post-back:hover {
+  color: var(--color-primary-dark);
+}
+
 /* ---------- 联系我 ---------- */
 .contact-grid {
   display: grid;
