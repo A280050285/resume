@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>李鑫盛的博客 - 医疗机器人 & 结构设计</title>
+  <title>LXS 博客 - 医疗机器人 & 结构设计</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -15,9 +15,10 @@
     <div class="container nav-inner">
       <a href="#home" class="nav-logo">LXS</a>
       <ul class="nav-links">
-        <li><a href="#about">关于我</a></li>
-        <li><a href="#skills">技能</a></li>
+        <li><a href="#home">首页</a></li>
+        <li><a href="#search">搜索</a></li>
         <li><a href="#blog">博客</a></li>
+        <li><a href="#topics">分类</a></li>
         <li><a href="#contact">联系</a></li>
       </ul>
       <button class="menu-toggle" aria-label="菜单">☰</button>
@@ -30,15 +31,21 @@
     <img class="hero-bg" src="images/bg.jpg" alt="">
     <div class="container hero-inner">
       <div class="hero-text">
-        <p class="hero-greeting">👋 你好，我是</p>
-        <h1 class="hero-name">李鑫盛</h1>
+        <p class="hero-greeting">👋 欢迎来到我的博客</p>
+        <h1 class="hero-name">探索与分享</h1>
         <p class="hero-title">医疗机器人结构工程师</p>
-        <p class="hero-desc">
-          分享结构设计心得、仿真分析技巧与医疗机器人研发路上的思考。
-        </p>
+        <p class="hero-desc">分享手术机器人设计、精密传动、工装夹具与模拟仿真的工程实践心得</p>
+        <div class="hero-fields">
+          <span class="field-tag" onclick="filterByKeyword('手术机器人')">🏥 手术机器人设计</span>
+          <span class="field-tag" onclick="filterByKeyword('精密传动')">⚙️ 精密传动系统</span>
+          <span class="field-tag" onclick="filterByKeyword('工装设计')">🔧 工装夹具设计</span>
+          <span class="field-tag" onclick="filterByKeyword('仿真分析')">🔬 有限元仿真分析</span>
+          <span class="field-tag" onclick="filterByKeyword('元器件选型')">📦 元器件选型</span>
+          <span class="field-tag" onclick="filterByKeyword('结构优化')">📐 结构优化设计</span>
+        </div>
         <div class="hero-actions">
           <a href="#blog" class="btn btn-primary">阅读文章</a>
-          <a href="#contact" class="btn btn-outline">联系我</a>
+          <a href="#search" class="btn btn-outline">搜索内容</a>
         </div>
       </div>
       <div class="hero-avatar">
@@ -48,90 +55,48 @@
     </div>
   </header>
 
-  <!-- ========== 关于我 ========== -->
-  <section id="about" class="section">
+  <!-- ========== 搜索区域 ========== -->
+  <section id="search" class="section section-alt">
     <div class="container">
-      <h2 class="section-title">关于我</h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            我是一名医疗机器人结构工程师，目前就职于<strong>北京术锐机器人股份有限公司</strong>，
-            专注于腹腔镜手术机器人台车的结构设计与研发工作。
-          </p>
-          <p>
-            工作中主导过多款手术台车关键模块的结构方案设计，涵盖元器件选型、精密传动系统设计、
-            工装夹具开发及有限元模拟仿真分析，具备扎实的机械设计功底与跨部门协作能力。
-          </p>
-          <ul class="about-info">
-            <li><span class="info-label">📍 所在地</span> 中国 · 北京</li>
-            <li><span class="info-label">📧 邮箱</span> 2830845469@qq.com</li>
-            <li><span class="info-label">🎂 出生年份</span> 2002 年</li>
-            <li><span class="info-label">🎓 学历</span> 本科 · 西安建筑科技大学 · 机械设计制造及其自动化</li>
-          </ul>
-        </div>
-        <div class="about-stats">
-          <div class="stat-item">
-            <span class="stat-number">2+</span>
-            <span class="stat-label">年工作经验</span>
+      <h2 class="section-title">搜索内容</h2>
+      <p class="section-subtitle">按关键词、日期或标题快速找到你感兴趣的文章</p>
+      <div class="search-bar">
+        <input type="text" id="searchInput" class="search-input" placeholder="🔍  输入关键词、作者或文章标题...">
+        <div class="search-filters">
+          <div class="date-picker-wrap">
+            <svg class="date-picker-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <input type="date" id="datePicker" class="date-picker" title="按日期筛选">
           </div>
-          <div class="stat-item">
-            <span class="stat-number">10+</span>
-            <span class="stat-label">台车模块设计</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">5+</span>
-            <span class="stat-label">专利申请</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number">3+</span>
-            <span class="stat-label">仿真分析项目</span>
-          </div>
+          <select id="sortFilter" class="filter-select">
+            <option value="newest">🕐 最新优先</option>
+            <option value="oldest">🕐 最早优先</option>
+          </select>
+          <button id="clearSearch" class="btn btn-outline btn-sm">✕ 清除</button>
         </div>
       </div>
+      <p id="noResult" class="no-result" style="display:none;">😔 没有找到匹配的文章，试试其他关键词吧～</p>
     </div>
   </section>
 
-  <!-- ========== 技能 ========== -->
-  <section id="skills" class="section section-alt">
+  <!-- ========== 关键词云 ========== -->
+  <section id="topics" class="section">
     <div class="container">
-      <h2 class="section-title">专业技能</h2>
-      <div class="skills-grid">
-        <!-- 技能分类 1 -->
-        <div class="skill-category">
-          <h3>📐 CAD 设计软件</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">SolidWorks</span>
-            <span class="skill-tag">Creo / ProE</span>
-            <span class="skill-tag">AutoCAD</span>
-            <span class="skill-tag">CATIA</span>
-            <span class="skill-tag">UG/NX</span>
-            <span class="skill-tag">Inventor</span>
-          </div>
-        </div>
-        <!-- 技能分类 2 -->
-        <div class="skill-category">
-          <h3>🔬 仿真与分析</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">ANSYS Workbench</span>
-            <span class="skill-tag">ABAQUS</span>
-            <span class="skill-tag">ADAMS 动力学</span>
-            <span class="skill-tag">MATLAB</span>
-            <span class="skill-tag">有限元分析</span>
-            <span class="skill-tag">运动学仿真</span>
-          </div>
-        </div>
-        <!-- 技能分类 3 -->
-        <div class="skill-category">
-          <h3>⚙️ 结构设计 & 工程</h3>
-          <div class="skill-tags">
-            <span class="skill-tag">元器件选型</span>
-            <span class="skill-tag">精密传动设计</span>
-            <span class="skill-tag">工装夹具设计</span>
-            <span class="skill-tag">GD&T 公差分析</span>
-            <span class="skill-tag">DFM/DFA</span>
-            <span class="skill-tag">BOM 管理</span>
-          </div>
-        </div>
+      <h2 class="section-title">话题分类</h2>
+      <p class="section-subtitle">点击关键词筛选相关文章</p>
+      <div class="tag-cloud" id="tagCloud">
+        <span class="tag-cloud-item tag-active" data-keyword="all">全部</span>
+        <span class="tag-cloud-item" data-keyword="结构设计">结构设计</span>
+        <span class="tag-cloud-item" data-keyword="仿真分析">仿真分析</span>
+        <span class="tag-cloud-item" data-keyword="精密传动">精密传动</span>
+        <span class="tag-cloud-item" data-keyword="手术机器人">手术机器人</span>
+        <span class="tag-cloud-item" data-keyword="台车设计">台车设计</span>
+        <span class="tag-cloud-item" data-keyword="机械臂">机械臂</span>
+        <span class="tag-cloud-item" data-keyword="无菌屏障">无菌屏障</span>
+        <span class="tag-cloud-item" data-keyword="系统架构">系统架构</span>
+        <span class="tag-cloud-item" data-keyword="工装设计">工装设计</span>
+        <span class="tag-cloud-item" data-keyword="元器件选型">元器件选型</span>
+        <span class="tag-cloud-item" data-keyword="结构优化">结构优化</span>
+        <span class="tag-cloud-item" data-keyword="有限元分析">有限元分析</span>
       </div>
     </div>
   </section>
@@ -145,7 +110,7 @@
       <div class="works-grid">
 
         <!-- 文章卡片 1 -->
-        <article class="work-card">
+        <article class="work-card" data-keywords="结构设计,手术机器人,台车设计,机械臂,无菌屏障,系统架构" data-date="2026-06-06" data-title="腹腔镜手术机器人系统架构与结构设计概述">
           <div class="work-image">
             <div class="work-img-placeholder">🤖</div>
           </div>
@@ -167,6 +132,46 @@
     </div>
   </section>
 
+  <!-- ========== 统计看板 ========== -->
+  <section id="stats" class="section">
+    <div class="container">
+      <h2 class="section-title">文章统计</h2>
+      <p class="section-subtitle">按类型查看我的内容分布</p>
+      <div class="stats-dashboard">
+        <div class="stats-card">
+          <span class="stats-icon">📝</span>
+          <span class="stats-number" id="totalArticles">1</span>
+          <span class="stats-label">文章总数</span>
+        </div>
+        <div class="stats-card">
+          <span class="stats-icon">🏗️</span>
+          <span class="stats-number" id="catDesign">1</span>
+          <span class="stats-label">结构设计</span>
+        </div>
+        <div class="stats-card">
+          <span class="stats-icon">🔬</span>
+          <span class="stats-number" id="catSim">0</span>
+          <span class="stats-label">仿真分析</span>
+        </div>
+        <div class="stats-card">
+          <span class="stats-icon">🔧</span>
+          <span class="stats-number" id="catTool">0</span>
+          <span class="stats-label">工装设计</span>
+        </div>
+        <div class="stats-card">
+          <span class="stats-icon">⚙️</span>
+          <span class="stats-number" id="catTrans">0</span>
+          <span class="stats-label">精密传动</span>
+        </div>
+        <div class="stats-card">
+          <span class="stats-icon">📦</span>
+          <span class="stats-number" id="catPart">0</span>
+          <span class="stats-label">元器件选型</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ========== 联系方式 ========== -->
   <section id="contact" class="section section-alt">
     <div class="container">
@@ -174,24 +179,18 @@
       <p class="section-subtitle">如果你对我的经历感兴趣，欢迎随时联系</p>
       <div class="contact-grid">
         <a href="mailto:2830845469@qq.com" class="contact-card">
-          <span class="contact-icon">📧</span>
+          <span class="contact-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+          </span>
           <span class="contact-label">邮箱</span>
           <span class="contact-value">2830845469@qq.com</span>
         </a>
         <a href="https://github.com/A280050285" target="_blank" class="contact-card">
-          <span class="contact-icon">💻</span>
+          <span class="contact-icon">
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.605-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12 24 5.37 18.63 0 12 0z"/></svg>
+          </span>
           <span class="contact-label">GitHub</span>
           <span class="contact-value">github.com/A280050285</span>
-        </a>
-        <a href="#" class="contact-card">
-          <span class="contact-icon">🔗</span>
-          <span class="contact-label">LinkedIn</span>
-          <span class="contact-value">linkedin.com/in/LXS</span>
-        </a>
-        <a href="#" class="contact-card">
-          <span class="contact-icon">📝</span>
-          <span class="contact-label">技术博客</span>
-          <span class="contact-value">LXS.tech</span>
         </a>
       </div>
     </div>
