@@ -292,4 +292,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // ========== 初始化统计 ==========
   updateStats();
 
+  // ========== 日历默认显示今天 ==========
+  if (datePicker) {
+    const today = new Date();
+    const yyyy = today.getFullYear();
+    const mm = String(today.getMonth() + 1).padStart(2, '0');
+    const dd = String(today.getDate()).padStart(2, '0');
+    datePicker.value = `${yyyy}-${mm}-${dd}`;
+  }
+
 });
